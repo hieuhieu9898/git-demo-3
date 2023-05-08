@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Tính Điểm ĐH Khối D</p>
+    <form>
+        <table>
+            <tr>
+                <td>Môn Toán</td>
+                <td><input type="number" id="Toan" ></input></td>
+      
+            </tr> <br>
+            <tr>
+                <td>Môn Anh</td> 
+                <td><input type="number" id="Anh" ></input></td>
+            </tr> <br>
+            <tr>
+                <td>Môn Văn</td>
+                <td><input type="number" id="Van" ></input></td>
+            </tr> <br>
+            <tr>
+                <td>Khu vực</td>
+                <td>
+                    <select name="KV" id="KV">
+                        <option value="KV1">KV1</option>
+                        <option value="KV2">KV2</option>
+                        <option value="KV2-NT">KV2-NT</option>
+                        <option value="KV3">KV3</option>
+                    </select>
+
+                </td>
+
+                
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" id="TĐ" value="Tính Điểm"></td>
+                
+            </tr>
+        </table>
+
+       <script>
+
+            document.getElementById("TĐ").onclick = function () {
+                let KV = document.getElementById("KV").value;
+                let T =  parseFloat(document.getElementById("Toan").value);
+                let V = parseFloat(document.getElementById("Van").value);
+                let A =  parseFloat(document.getElementById("Anh").value);
+                switch (KV) {
+                    case "KV1":
+                        document.write("kết quả là:", T + V + A + 0.75);
+                        break;
+                    case "KV2":
+                        document.write("kết quả là:", T + V + A + 0.25);
+                        break;
+                    case "KV2-NT": 
+                        document.write("kết quả là:", T + V + A + 0.5);
+                        break;  
+                    case "KV3": 
+                        document.write("kết quả là:", T + V + A);
+                        break;
+                }
+                
+                
+
+
+            };
+
+
+
+
+
+
+
+
+       </script>
+
+
+
+
+
+    </form>
+
+
+</body>
+</html>
