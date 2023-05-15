@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+   
+  </head>
+  <body>
+    <script language="javascript">
+        let sout, i, n;
+        sout = "<table border='1' width='300' ";
+        i  = 1; n = 2;
+        while (i <= 10) {
+            sout = sout + "<tr>";
+            while (n <= 10) {
+                sout = sout + "<td>" +  n + "x" + i + "=" + (n * i) + "</td>";
+                n++;
+            }
+            sout = sout + "</tr>";
+            n = 2;
+            i++;
+        }
+        sout = sout + "</table>";
+        document.write(sout);
+        </script>
+  </body>
+</html>
