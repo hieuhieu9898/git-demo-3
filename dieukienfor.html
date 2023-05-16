@@ -7,22 +7,22 @@
     <title>Document</title>
   </head>
   <body>
-    <script language="javascript">
-      let sout, i, n;
-      sout = "<table border='1' width='300' cellspacing='0' cellpadding='3'>";
-      i = n = 1;
-      while (i <= 10) {
-          sout = sout + "<tr>";
-          while (n <= 10) {
-              sout = sout + "<td>" +  n + "x" + i + "=" + (n * i) + "</td>";
-              n++;
+    <button id="btn">Chơi</button>
+    <script>
+      document.getElementById("btn").onclick = function () {
+        let maxNumber = parseInt(prompt("Enter max number: "));
+        let i = Math.floor(Math.random() * maxNumber);
+
+        for (let turn = 1; turn <= 3; turn++) {
+          let choicedNumber = parseInt(prompt("Enter choiced number: "));
+          if ((choicedNumber = i)) {
+            alert("Bạn đã thắng");
+            break;
+          } else {
+            alert("Ban da Thua");
           }
-          sout = sout + "</tr>";
-          n = 1;
-          i++;
-      }
-      sout = sout + "</table>";
-      document.write(sout);
-      </script>
+        }
+      };
+    </script>
   </body>
 </html>

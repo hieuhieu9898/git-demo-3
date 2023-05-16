@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="chơi" type="button" onclick="doanso()">chơi</button>
+    <script>
+      function doanso() {
+        document.getElementById("chơi").innerHTML = "chơi lại";
+        let nhapsomax = parseInt(prompt("nhập số max:"));
+        let socandoan = Math.floor(Math.random() * nhapsomax);
+
+        for (let i = 1; i <= 3; i++) {
+          let sodoan = parseInt(prompt("số đoán: "));
+          if ((sodoan = socandoan)) {
+            alert("Bạn đã thắng");
+            break;
+          } else {
+            alert("Bạn đã Thua, thử lại");
+          }
+        }
+      };
+    </script>
+  </body>
+</html>
