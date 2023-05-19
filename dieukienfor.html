@@ -8,20 +8,17 @@
   </head>
   <body>
     <script>
-      const y = [1, 2, "bgd"];
-      const a = new Array(100);
-
-      y[3] = "abcd"; / thêm vào vị trí 3
-      y[y.length] = 123;/ thêm vào vị trí cuối.
-      
-      for (let i = 0; i < y.length; i++) {
-        console.log("phần tử thứ",i, y[i]);
-        
-      }
-      let new length = y.push("thêm ở đầU", 12, 13);
-      let new length = y.unshift("thêm ở cuối", 12, 13);
-      y.splice(2 (xoá từ vị trí 2), 3 (3 phần từ từ 2 trở đi) )
-      y.sort
+      let str3 = ""
+        for (let i = 5; i >= 1; i--) {
+            for (let j = 1; j <= i; j++) {
+                str3 += "&nbsp;&nbsp;"
+            }
+            for (let q = 5; q >= i; q--) {
+                str3 += "*"
+            }
+            str3 += "<br/>"
+        }
+        document.write(str3 + "<br/>");
     </script>
   </body>
 </html>
