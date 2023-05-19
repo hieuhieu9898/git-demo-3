@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="Bam" type="button" onclick="sddn()">bấm để nhập số nguyên dương</button>
+    <script>
+      function sddn() {
+        document.getElementById("Bam").innerHTML = "Nhập lại";
+        let SND = parseFloat(prompt("nhập số nguyên dương"));
+        if (SND <= 0) {
+          alert("nhập lại số nguyên dương");
+        } else {
+          let SD = 0;
+          while (SND > 0) {
+            SD = SD * 10 + (SND % 10);
+            SND = Math.floor(SND / 10);
+          }
+          alert("số đảo ngược là " + SD);
+        }
+      };
+    </script>
+  </body>
+</html>
